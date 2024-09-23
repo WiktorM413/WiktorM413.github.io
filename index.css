@@ -3,10 +3,10 @@
     background: gray;
 }
 .link{
+    display: grid;
+    grid-auto-flow: column;
     background: black;
-    display: flex;
     padding: 10px 10px;
-    justify-content: space-around;
     text-align: center;
     color: white;
     font-size: 50px;
@@ -15,8 +15,11 @@
     background: lightgray;
 }
 .center{
-    background: white;
-    display: flex;    
+    display: grid;
+    background: white; 
+    /* grid-template-columns: 33% 67%; */
+    grid-auto-flow: column;
+
 }
 .footer{
     background: gray;
@@ -25,11 +28,8 @@
 .left
 {
     background: lightgray;
-    flex: 33%;
 }
-.middle{
-    flex: 67%;
-}
+
 h1{
     text-align: center;
 }
@@ -40,9 +40,10 @@ h1{
 }
 @media screen and (max-width: 700px) {
     .link {   
-      flex-direction: column;
+      grid-auto-flow: row;
     }
-    .center{
-        flex-direction: column;
+    .center
+    {
+        grid-auto-flow: row;
     }
 }
